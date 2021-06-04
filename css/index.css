@@ -1,3 +1,11 @@
+/* TO DO
+1. lambda logo in header needs to be lower
+2. space between logo and links in header is off on the left
+3. color the boxes
+4. left align footer
+*/
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -28,7 +36,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1.5;
+	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -46,10 +54,14 @@ table {
 	border-spacing: 0;
 }
 
+/*universal styling*/
+
 * {
     box-sizing: border-box;
+    border:1px solid grey;
 }
 
+/*general styling*/
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
@@ -65,9 +77,38 @@ p {
     line-height: 1.4;
 }
 
+a{
+    text-decoration: none;
+}
+
+nav{
+    display:flex;
+    justify-content: space-between;
+    color:black;
+    width:800px;
+    margin:0 auto;
+    align-items:flex-end;
+}
+
+nav .links{
+    width:75%;
+    display:flex;
+    justify-content: space-around;
+}
+
+nav a{
+    color:black;
+}
+
+/*home - top section styling*/
+
 .container {
     width: 800px;
     margin: 0 auto;
+}
+
+.jumboimg{
+    padding:2% 0;    
 }
 
 .top-content {
@@ -84,6 +125,8 @@ p {
     padding-bottom: 20px;  
 }
 
+/*home - box section styling */
+
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -93,6 +136,7 @@ p {
     padding: 0 2%;
     margin-bottom: 0;
 }
+
 
 .middle-content .boxes {
     display: flex;
@@ -111,6 +155,8 @@ p {
     justify-content: center;
 }
 
+/*home - bottom section styling*/
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -124,6 +170,8 @@ p {
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
+
+/* footer styling */
 
 footer {
     width: 100%;
@@ -142,4 +190,53 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/*about page styling*/
+
+/*about - about section styling*/
+
+.about{
+    padding:3% 2%;
+    border-bottom:2px dashed black;
+}
+
+/* about - what we do section styling */
+
+.whatwedo{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding:3% 2%;
+}
+
+.aboutitems{
+    width:50%;
+    border-bottom: 2px dashed black;
+    padding:2% 0;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.aboutitems img{
+    width:100%;
+}
+
+.aboutitems p{
+    width:90%;
+    font-size: 14px;
+}
+.aboutitems a{
+    color:black;
+    border-radius:20%;
+    border:2px solid black;
+    padding:2%;
+    margin-top:5%;
+}
+
+/*about - work together section styling*/
+
+.together{
+    padding:3% 2%;
 }
