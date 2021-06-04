@@ -1,11 +1,3 @@
-/* TO DO
-1. lambda logo in header needs to be lower
-2. space between logo and links in header is off on the left
-3. color the boxes
-4. left align footer
-*/
-
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,14 +46,13 @@ table {
 	border-spacing: 0;
 }
 
-/*universal styling*/
+/***universal styling***/
 
 * {
     box-sizing: border-box;
-    border:1px solid grey;
 }
 
-/*general styling*/
+/***general styling***/
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
@@ -75,13 +66,20 @@ h1, h2, h3, h4, h5 {
 
 p {
     line-height: 1.4;
+    font-size:16px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-nav{
+header {
+    margin:2% 0;
+}
+
+/***nav bar styling***/
+
+nav {
     display:flex;
     justify-content: space-between;
     color:black;
@@ -90,26 +88,57 @@ nav{
     align-items:flex-end;
 }
 
-nav .links{
-    width:75%;
+nav .links {
+    width:85%;
     display:flex;
     justify-content: space-around;
 }
 
-nav a{
+nav a {
     color:black;
 }
-
-/*home - top section styling*/
 
 .container {
     width: 800px;
     margin: 0 auto;
 }
 
-.jumboimg{
+/***top image styling***/
+
+.jumboimg {
     padding:2% 0;    
+    width:100%;
 }
+
+/***footer styling***/
+
+footer {
+    width: 100%;
+    background: black;
+    display:flex;
+}
+
+footer nav {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+    font-size: 14px;
+}
+
+footer nav a {
+    color: white;
+    text-decoration: none;
+}
+
+footer div {
+    width:40%;
+}
+
+/***home page styling***/
+
+/*home - top section styling*/
 
 .top-content {
     display: flex;
@@ -147,12 +176,52 @@ nav a{
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
+    background:black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.middle-content .boxes .box.box1 {
+    background-color: teal;
+}
+
+.middle-content .boxes .box.box2 { 
+    background-color: gold;
+}
+
+.middle-content .boxes .box.box3 {
+    background-color: cadetblue;
+}
+
+.middle-content .boxes .box.box4 {
+    background-color: coral;
+}
+
+.middle-content .boxes .box.box5 {
+    background-color: crimson;
+}
+
+.middle-content .boxes .box.box6 {
+    background-color: forestgreen;
+}
+
+.middle-content .boxes .box.box7 {
+    background-color: darkorchid;
+}
+
+.middle-content .boxes .box.box8 {
+    background-color: hotpink;
+}
+
+.middle-content .boxes .box.box9 { 
+    background-color: indigo;
+}
+
+.middle-content .boxes .box.box10 {
+    background-color: dodgerblue;
 }
 
 /*home - bottom section styling*/
@@ -171,72 +240,53 @@ nav a{
     padding-right: 0;
 }
 
-/* footer styling */
-
-footer {
-    width: 100%;
-    background: black;
-}
-
-footer nav {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
-}
-
-footer nav a {
-    color: white;
-    text-decoration: none;
-}
-
-/*about page styling*/
+/***about page styling***/
 
 /*about - about section styling*/
 
-.about{
+.about-page .about {
     padding:3% 2%;
-    border-bottom:2px dashed black;
+    border-bottom:1px dashed black;
 }
 
 /* about - what we do section styling */
 
-.whatwedo{
+.about-page .whatwedo {
     display:flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding:3% 2%;
+    padding:2% 1%;
 }
 
-.aboutitems{
-    width:50%;
-    border-bottom: 2px dashed black;
+.about-page .aboutitems {
+    width:45%;
+    border-bottom: 1px dashed black;
     padding:2% 0;
     display:flex;
     flex-wrap: wrap;
     align-content: space-between;
+    margin-right: 2%;
 }
 
-.aboutitems img{
+.about-page .aboutitems img {
     width:100%;
+    padding-bottom: 3%;
 }
 
-.aboutitems p{
-    width:90%;
-    font-size: 14px;
+.about-page .aboutitems p {
+    font-size: 15px;
 }
-.aboutitems a{
+.about-page .aboutitems a {
     color:black;
-    border-radius:20%;
-    border:2px solid black;
-    padding:2%;
+    border-radius:10px;
+    border:1px solid black;
+    padding:3% 5%;
     margin-top:5%;
+    font-size:14px;
 }
 
 /*about - work together section styling*/
 
-.together{
+.about-page .together {
     padding:3% 2%;
 }
